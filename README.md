@@ -3,7 +3,7 @@
 
 Hey Guys!
 
-In the first part of this series of articles about creating custom controls, we learned how to create an ExtendedListView that supports Infinite Scrolling and Commands to handle business logic directly on our ViewModels.
+In the [first part of this series](https://www.pujolsluis.com/creating-custom-controls-part-1-extendedlistview/) of articles about creating custom controls, we learned how to create an ExtendedListView that supports Infinite Scrolling and Commands to handle business logic directly on our ViewModels.
 
 In this article we are going to see our next use case which is creating a Custom Stepper + CarouselView (SliderView) to support sliders in our Xamarin Forms Apps.
 
