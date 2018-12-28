@@ -7,7 +7,6 @@ namespace SliderViewSample.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
-        public string Test { get; set; } = "Test";
         public IList<SliderViewItem> Data { get; set; } = new List<SliderViewItem>()
         {
             new SliderViewItem()
