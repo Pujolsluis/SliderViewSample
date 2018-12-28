@@ -16,5 +16,5 @@ In this article we are going to see our next use case which is creating a Custom
 Our use case to dive into on creating custom controls Part 2 will be the **SliderView**
 
 <p align="center">
-<img src="https://github.com/Pujolsluis/SliderViewSample/blob/master/Arts/SliderViewSampleDemo.gif" height="500" width="400" title="SliderView Sample - Pujolsluis"/>
+<img src="https://github.com/Pujolsluis/SliderViewSample/blob/master/Arts/SliderViewSampleDemo.gif" height="584" width="600" title="SliderView Sample - Pujolsluis"/>
 </p>
