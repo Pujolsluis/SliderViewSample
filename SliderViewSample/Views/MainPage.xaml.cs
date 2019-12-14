@@ -17,36 +17,6 @@ namespace SliderViewSample
         {
             InitializeComponent();
             this.BindingContext = new MainPageViewModel();
-
-            MainCarousel.ItemSelected += (sender, args) =>
-            {
-                if (!(args.SelectedItem is SliderViewItem item))
-                    return;
-
-                if (CarouselStepBar.Steps > 0)
-                    CarouselStepBar.StepSelected = (int)item.Step;
-            };
-
-            CarouselStepBar.OnStepSelected += (sender, args) =>
-            {
-                if (!(args is int step))
-                    return;
-                var value = step;
-                MainCarousel.Position = --value;
-            };
-        }
-
-
-        protected override void OnBindingContextChanged()
-        {
-            base.OnBindingContextChanged();
-
-            Context = this.BindingContext as MainPageViewModel;
-
-            if(Context.Data.Count > 0)
-            {
-                CarouselStepBar.StepSelected = 1;
-            }
         }
     }
 }

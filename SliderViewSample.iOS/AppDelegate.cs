@@ -22,6 +22,7 @@ namespace SliderViewSample.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            global::Xamarin.Forms.Forms.SetFlags(new[] { "CarouselView_Experimental", "IndicatorView_Experimental" });
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

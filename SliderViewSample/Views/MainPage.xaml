@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:SliderViewSample"
              xmlns:controls="clr-namespace:SliderViewSample.Controls"
-             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
              x:Class="SliderViewSample.MainPage">
@@ -16,11 +15,11 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <forms:CarouselView x:Name="MainCarousel"
+            <CarouselView x:Name="MainCarousel"
                                 Grid.Row="0" Grid.RowSpan="2"
                                 ItemsSource="{Binding Data}"
                                 HeightRequest="120">
-                <forms:CarouselView.ItemTemplate>
+                <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Grid BackgroundColor="{Binding BackgroundColor}">
                             <Grid.RowDefinitions>
@@ -45,15 +44,15 @@
                              </StackLayout>
                         </Grid>
                     </DataTemplate>
-                </forms:CarouselView.ItemTemplate>
-            </forms:CarouselView>
-            <controls:StepProgressBarControl x:Name="CarouselStepBar"
-                                             Grid.Row="0" 
-                                             HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
-                                             StepColor="White" UnselectedStepColor="Gray"
-                                             ItemsSource="{Binding Data}"
-                                             DividersEnabled="false" Padding="10,12,10,12"
-                                             Margin="42,16,42,0"/>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="CarouselStepBar"
+                           Grid.Row="0" 
+                           HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                           SelectedIndicatorColor="White" IndicatorColor="Gray"
+                           IndicatorSize="24"
+                           Margin="42,16,42,0"
+                           IndicatorView.ItemsSourceBy="MainCarousel"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
